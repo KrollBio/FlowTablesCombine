@@ -1,5 +1,7 @@
 # FlowTablesCombine
 Python script to combine csv tables exported from FlowJo
+Author: Kyle Kroll
+Affiliation: CVVR-BIDMC/HMS
 
 ## Requirements
 - Python 3.x
