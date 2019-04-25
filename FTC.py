@@ -22,10 +22,10 @@ def load_csv(filepath):
     temp_df = pd.read_csv("{0}{1}".format(file_dir, filepath), delimiter=",")
     temp_df = temp_df.drop(temp_df[temp_df.iloc[:,0] == "Mean"].index)
     temp_df = temp_df.drop(temp_df[temp_df.iloc[:, 0] == "SD"].index)
-    temp_df = temp_df.drop(labels="Unnamed: 32", axis=1)
     new_colnames = [modify_col_names(x) for x in temp_df.columns]
     new_colnames[0] = "Sample"
     temp_df.columns = new_colnames
+    temp_df = temp_df.loc[:, ~temp_df.columns.str.contains('^Unnamed')]
     return(temp_df)
 
 
