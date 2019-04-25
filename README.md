@@ -16,5 +16,5 @@ Install script to a target location. You can optionally add to your systems path
 ## Usage
 
 ```
-python FTC.py --input INPUT_DIR --output OUTPUT_FILE
+python FTC.py --input INPUT_DIR --output OUTPUT_FILE --separator [csv][tab]
 ```
